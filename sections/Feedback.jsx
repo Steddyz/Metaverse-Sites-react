@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 import styles from "../styles";
-import { staggerContainers, fadeIn, zoomIn } from "../utils/motion";
+import { staggerContainer, fadeIn, zoomIn } from "../utils/motion";
 
 const Feedback = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
-      variants={staggerContainers}
+      variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
@@ -51,6 +51,16 @@ const Feedback = () => (
           className="w-full lg:h-[610px] h-auto min-h-[210px] rounded-[40px] 
           object-cover"
         />
+        <motion.div
+          variants={zoomIn(0.4, 1)}
+          className="absolute lg:block hidden -left-[10%] top-[3%]"
+        >
+          <img
+            src="/stamp.png"
+            alt="stamp"
+            className="w-[155px] h-[155px] object-contain"
+          />
+        </motion.div>
       </motion.div>
     </motion.div>
     ;
