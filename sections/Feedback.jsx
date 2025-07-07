@@ -55,11 +55,13 @@ const Feedback = () => (
           variants={zoomIn(0.4, 1)}
           className="absolute lg:block hidden -left-[10%] top-[3%]"
         >
-          <img
-            src="/stamp.png"
-            alt="stamp"
-            className="w-[155px] h-[155px] object-contain"
-          />
+          <a href="#">
+            <img
+              src="/stamp.png"
+              alt="stamp"
+              className="w-[155px] h-[155px] object-contain"
+            />
+          </a>
         </motion.div>
       </motion.div>
     </motion.div>

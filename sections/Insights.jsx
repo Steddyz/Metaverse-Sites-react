@@ -24,11 +24,13 @@ const Insights = () => (
       />
       <div className="flex flex-col mt-[50px] gap-[30px]">
         {insights.map((insight, index) => (
-          <InsightCard
-            key={`insight-${index}`}
-            {...insight}
-            index={index + 1}
-          />
+          <a href="#">
+            <InsightCard
+              key={`insight-${index}`}
+              {...insight}
+              index={index + 1}
+            />
+          </a>
         ))}
       </div>
     </motion.div>
